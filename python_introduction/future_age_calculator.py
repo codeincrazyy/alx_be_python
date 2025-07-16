@@ -1,4 +1,4 @@
-input("How Old are You ?")
+input("How old are you?")
 age = int(input())
 
 future_age = age + 27
