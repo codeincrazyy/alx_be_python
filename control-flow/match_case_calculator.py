@@ -1,28 +1,17 @@
-print("Enter the first number:")
-
-num1 = int(input())
-
-print("Enter the second number:")
-
-num2 = int(input())
-
-print("Choose the operation (+,-,*,/): ")
-
-operation = input()
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+operation = input("Choose the operation (+,-,*,/): ")
 
 match operation:
     case "+":
-     result = num1 + num2
-     print(f"The result is {result}")
-
+        result = num1 + num2
     case "-":
-     result = num1 - num2
-     print(f"The result is {result}")
-
+        result = num1 - num2
     case "*":
-      result = num1 * num2
-      print(f"The result is {result}")
-
+        result = num1 * num2
     case "/":
-       result = num1 / num2
-       print(f"The result is {result}")
+        result = "Error: Division by zero" if num2 == 0 else num1 / num2
+    case _:
+        result = "Invalid operation"
+
+print(f"The result is {result}")
