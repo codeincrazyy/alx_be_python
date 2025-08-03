@@ -9,7 +9,6 @@ class BankAccount:
         
         if amount <= self.__balance:
             self.__balance -= amount
-            print(f"Withdrew: ${amount}")
             return True
         else:
             return False
